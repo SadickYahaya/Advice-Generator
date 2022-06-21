@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/SadickYahaya/Advice-Generator](https://github.com/SadickYahaya/Advice-Generator)
-- Live Site URL: [https://intro-section-dropdown2022.netlify.app/](https://intro-section-dropdown2022.netlify.app/)
+- Live Site URL: [https://advice-generator2022.netlify.app/](https://advice-generator2022.netlify.app/)
 
 ## My process
 
