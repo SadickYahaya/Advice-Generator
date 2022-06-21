@@ -3,7 +3,7 @@ import React from 'react'
 const Quote = (props) => {
     return (
         <>
-            <p>{props.quote}</p>
+            <p>"{props.quote}"</p>
         </>
     )
 }
