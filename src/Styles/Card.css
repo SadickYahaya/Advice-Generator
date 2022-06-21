@@ -25,13 +25,19 @@
     border-radius: 50%;
 }
 
+.dice button {
+    background-color: transparent;
+    border: none !important;
+
+}
+
 .dice:hover {
     box-shadow: 0px 0px 30px 5px rgba(82,255,168,0.75);
 }
 
 @media screen and (max-width: 488px){
     .card {
-        width: 28em;
+        width: 25em;
         display: flex;
         flex-direction: column;
         align-items: center;
