@@ -6,35 +6,34 @@ import '../Styles/Card.css'
 
 const Card = () => {
     const [quote, setQuote] = useState('');
+    const [id, setId] = useState('');
 
     const quoteApi = async () => {
         let arrayOfQuotes = [];
         try {
-            const data = await axios.get('https://api.quotable.io/random');
+            const data = await axios.get('https://api.adviceslip.com/advice');
             arrayOfQuotes = data.data
+            console.log(data)
         } catch (error) {
             console.log(error.message)
         }
 
         try {
-            setQuote(arrayOfQuotes.content)
+            setQuote(arrayOfQuotes.slip['advice']);
+            setId(arrayOfQuotes.slip['id']);
         } catch (error) {
             console.log(error.message)
         }
+        
     };
 
     useEffect(() => {
         quoteApi();
     }, [])
 
-    const randomNumber = (number) => {
-        number = Math.floor(Math.random() * 999);
-        return number;
-    }
-
     return (
         <div className='card'>
-            <h5>Advice #{randomNumber()}</h5>
+            <h5>Advice #{id}</h5>
             <Quote quote = {quote}/>
             <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z"/><g transform="translate(212)" fill="#CEE3E9"><rect width="6" height="16" rx="3"/><rect x="14" width="6" height="16" rx="3"/></g></g></svg>
             <div className='dice'>
